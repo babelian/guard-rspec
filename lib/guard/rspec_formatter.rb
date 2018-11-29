@@ -47,7 +47,8 @@ module Guard
 
         until spec_path?(location)
           unless (metadata = _extract_group(metadata))
-            STDERR.puts "no spec file location in #{root_metadata.inspect}"
+            # HACK
+            # STDERR.puts "no spec file location in #{root_metadata.inspect}"
             return root_metadata[:location]
           end
 
